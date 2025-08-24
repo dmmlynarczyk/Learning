@@ -20,8 +20,16 @@ Basic terms and commands used in git.
 **`clone`:** Bring a repository that is hosted somewhere like Github into a folder on your local machine.  
 **`add`:** Track your files and changes in Git.  
 **`commit`:** Save your files in Git.  
+**`commit -m "message here"`:** Save your files and add a message for your commit.  
 **`push`:** Upload Git commits to a remote repo, like Github.  
-**`pull`:** Download changes from remote repo to your local machine, the opposite of push.  
+**`pull`:** Download changes from remote repo to your local machine, the opposite of push. A request to have your code pulled into another branch.
+**`branch`:** Allows you to see what branches you have and which branch you are currently working on (denoted with a \*).  
+**`checkout`:** Switch branches or restore working tree files.  
+**`checkout -b <name>`:** Create a new branch and name that branch whatever is in <name>.  
+**`checkout <name>`:** Switch the branch you are on.  
+**`merge`:** Merge Secondary Branch with Master Branch.
+**`diff`:** See the differences of what has been added, removed, and updated.
+
 
 ## Using Commands
 
