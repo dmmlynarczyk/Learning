@@ -1,8 +1,8 @@
-# Git
+# Commands
 
+Basic terms and commands used in git.
 
-
-## Terms
+## Basic Terms
 
 **Directory:** A different word for a folder.  
 **Terminal or Command Line:** The interface used for Text Commands.  
@@ -12,7 +12,7 @@
 **Repository:** Project, or the folder/place where your project is kept.  
 **GitHub:** A website to host your repositories online.  
 
-## Commands
+## Basic Commands
 
 > [!NOTE]
 > Git commands are in lowercase.
