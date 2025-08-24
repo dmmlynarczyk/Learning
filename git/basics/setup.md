@@ -1,5 +1,17 @@
 # SETUP
 
+## INSTALLATION
+
+To download git for all platforms go to [git-scm.com](https://git-scm.com)
+
+To download via CLI on Void Linux run:
+```
+sudo xbps-install -S
+sudo xbps-install git
+```
+
+To verify installation run `git --version`
+
 ## INITIAL USER SETUP
 
 Configuring user information used across all local repositories.
@@ -15,4 +27,10 @@ Configuring user information used across all local repositories.
 
 ## SETUP & INIT
 
-Co
+Configuring user information, initializing, and cloning repositories.
+
+`git init`  
+*Initialize an existing directory as a git repository*
+
+`git clone <URL>`  
+*Retrieve an entire repository from a hosted location via URL.*
