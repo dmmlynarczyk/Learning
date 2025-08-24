@@ -28,7 +28,11 @@ Basic terms and commands used in git.
 **`checkout -b <name>`:** Create a new branch and name that branch whatever is in <name>.  
 **`checkout <name>`:** Switch the branch you are on.  
 **`merge`:** Merge Secondary Branch with Master Branch.
-**`diff`:** See the differences of what has been added, removed, and updated.
+**`diff`:** See the differences of what has been added, removed, and updated.  
+**`reset`:** Allows you to undo the staged changes.  Removes them from `git status` command.  Opposite of `git add .`  
+**`reset HEAD~1`:** Allows you to go back one full commit.  Useful if you have already staged and commited a change.  This will force it to go back 1 commit prior to last commit.  
+**`log`:** View a log of all commits, arranged in reverse chronological order.  
+
 
 
 ## Using Commands
@@ -47,3 +51,5 @@ This only saves the code locally, to make it live we will use `git push`.
 **`git push origin main`:**   
 *origin* stands for the location of our git repository.  
 *master* is the branch we want to push to.
+
+
