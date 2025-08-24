@@ -36,6 +36,6 @@ When all changes show up under tracked when `git status` is run they are ready t
 We will run `git commit -m "message"` the message will be the title of the message in Github.
 This only saves the code locally, to make it live we will use `git push`.
 
-**`git push origin master`:**   
+**`git push origin main`:**   
 *origin* stands for the location of our git repository.  
 *master* is the branch we want to push to.
