@@ -1,5 +1,7 @@
 # Git
 
+
+
 ## Terms
 
 **Directory:** A different word for a folder.  
