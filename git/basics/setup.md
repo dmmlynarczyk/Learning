@@ -1,6 +1,6 @@
-# SETUP
+# Setup
 
-## INSTALLATION
+## Installation
 
 To download git for all platforms go to [git-scm.com](https://git-scm.com)
 
@@ -12,7 +12,7 @@ sudo xbps-install git
 
 To verify installation run `git --version`
 
-## INITIAL USER SETUP
+## Initial 
 
 Configuring user information used across all local repositories.
 
@@ -23,9 +23,9 @@ Configuring user information used across all local repositories.
 *Set a name that is identifiable for credit when reviewing version history*
 
 `git config --global color.ui auto`  
-*Set automatic command line coloring for git for easy reviewing.
+*Set automatic command line coloring for git for easy reviewing.*  
 
-## SETUP & INIT
+## INIT
 
 Configuring user information, initializing, and cloning repositories.
 
@@ -34,3 +34,4 @@ Configuring user information, initializing, and cloning repositories.
 
 `git clone <URL>`  
 *Retrieve an entire repository from a hosted location via URL.*
+

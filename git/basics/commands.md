@@ -52,4 +52,17 @@ This only saves the code locally, to make it live we will use `git push`.
 *origin* stands for the location of our git repository.  
 *master* is the branch we want to push to.
 
+## SSH
 
+*The following is what I have been using with Void Linux. So some changes may be necessary if a different distro, Windows, or Mac.*
+
+**Generate a new SSH key:** `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
+
+**Start the ssh-agent:** `eval "$(ssh-agent -s)"`
+
+**Add private key to ssh-agent:** `ssh-add ~/.ssh/<your_key_name>`
+
+**Copy your public key to add to GitHub profile:** `cat <your_key_name>`  
+*Copy the public key and paste it into the SSH key seciton in your GitHub profile settings.*
+
+**Test your SSH key connection:** `ssh -T git@github.com`
