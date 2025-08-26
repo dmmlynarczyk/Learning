@@ -67,4 +67,4 @@ This only saves the code locally, to make it live we will use `git push`.
 
 **Test your SSH key connection:** `ssh -T git@github.com`
 
-**To change your SSH key passphrase:** `ssh-keygen -p -f ~/.ssh/<your_key_name>
+**To change your SSH key passphrase:** `ssh-keygen -p -f ~/.ssh/<your_key_name>`  
