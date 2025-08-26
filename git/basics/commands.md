@@ -66,3 +66,5 @@ This only saves the code locally, to make it live we will use `git push`.
 *Copy the public key and paste it into the SSH key seciton in your GitHub profile settings.*
 
 **Test your SSH key connection:** `ssh -T git@github.com`
+
+**To change your SSH key passphrase:** `ssh-keygen -p -f ~/.ssh/<your_key_name>
