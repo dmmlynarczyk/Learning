@@ -54,7 +54,8 @@ This only saves the code locally, to make it live we will use `git push`.
 
 ## SSH
 
-*The following is what I have been using with Void Linux. So some changes may be necessary if a different distro, Windows, or Mac.*
+> [!NOTE]
+> The following is what I have been using with Void Linux. So some changes may be necessary if a different distro, Windows, or Mac.
 
 **Generate a new SSH key:** `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
 
