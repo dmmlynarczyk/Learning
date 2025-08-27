@@ -15,5 +15,5 @@ Common commands for the X Binary Package System (XBPS):
 
 ## Other Useful Commands
 
-- `flatpak install flathub <flathub_url>` - Install Flathub application  
+- `flatpak install flathub <flathub_url>` — Install Flathub application  
   - From my understanding this is good for apps you want sandboxed on the system.  
