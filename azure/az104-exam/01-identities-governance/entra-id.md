@@ -13,4 +13,9 @@
 - **Guest users** - External users invited to your tenant (B2B)
 - **External identities** - Users from other organizationsor social accounts
 
+## Group Types
+
+- **Security groups** - Control access to resources
+- **Microsoft 365 groups** - Collaboration (email, SharePoint, Teams)
+- **Dynamic groups** - Membership based on user attributes (Premium P1 required)
 
