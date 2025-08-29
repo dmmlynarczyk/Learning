@@ -1,5 +1,9 @@
 # Entra ID
 
+The identity provider for Microsoft.  
+Microsoft Graph (REST) is the standard way to talk to Entra.
+
+
 ## What Entra ID Does
 
 - Cloud-based identity and access management service
