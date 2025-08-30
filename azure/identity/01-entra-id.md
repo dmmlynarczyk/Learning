@@ -19,9 +19,15 @@
 
 ## Group Types
 
-- **Security groups** — Control access to resources
+- **Security groups** — Control access to resources (this is the most common type)  
 - **Microsoft 365 groups** — Collaboration (email, SharePoint, Teams)
 - **Dynamic groups** — Membership based on user attributes (Premium P1 required)
+
+## Devices
+
+- **Register** — Becomes known entity and we can manage it.
+  - Use this on a personal device, to make sure it is healthy, not jailbroken, etc.
+- **Join** — All of Register, but also allows you to authenticate with Entra users, and lock down the device more.
 
 ## Licenses
 
