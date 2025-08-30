@@ -27,7 +27,9 @@
 
 - **Free** — Basic user/group management, SSO to popular apps
 - **Premium P1** — Conditional access, dynamic groups, self-service password reset
-- **Premium P2** — Identity protection, privileged identity management
+- **Premium P2** — Identity protection, privileged identity management, and *Microsoft Entra ID Protection*
+- **Pay as you go** — offers a feature called Microsoft Entra B2C
+  - **B2C** — is a business-to-consumer identity as a service that allows you to control how users sign up, sign in, and manage their profiles when using your applications.
 
 ## Important Commands
 
