@@ -1,8 +1,8 @@
 # Entra ID
 
-The identity provider for Microsoft.  
-Microsoft Graph (REST) is the standard way to talk to Entra.
-
+- Used to be known as Azure AD.  
+- The identity provider for Microsoft.  
+- **Microsoft Graph** (REST) is the standard way to interact with Entra.  
 
 ## What Entra ID Does
 
@@ -22,3 +22,30 @@ Microsoft Graph (REST) is the standard way to talk to Entra.
 - **Security groups** — Control access to resources
 - **Microsoft 365 groups** — Collaboration (email, SharePoint, Teams)
 - **Dynamic groups** — Membership based on user attributes (Premium P1 required)
+
+## Licenses
+
+- **Free** — Basic user/group management, SSO to popular apps
+- **Premium P1** — Conditional access, dynamic groups, self-service password reset
+- **Premium P2** — Identity protection, privileged identity management
+
+## Important Commands
+
+### PowerShell 
+
+``` Powershell
+# Connect to Entra ID
+Connect-AzureAD
+
+# Create user
+New-AzureADUser -DisplayName "John Doe" -UserPrincipalName "john@contoso.com" -AccountEnabled $true
+
+# Create group
+New-AzureADGroup -DisplayName "IT Team" -SecurityEnabled $true -MailEnabled $false
+
+# Add user to group
+Add-AzureADGroupMember -ObjectId "group-id" -RefObjectId "user-id"
+
+# Get user info
+Get-AzureADUser -Filter "DisplayName eq 'John Doe'"
+```
