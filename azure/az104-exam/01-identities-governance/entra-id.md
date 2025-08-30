@@ -49,3 +49,19 @@ Add-AzureADGroupMember -ObjectId "group-id" -RefObjectId "user-id"
 # Get user info
 Get-AzureADUser -Filter "DisplayName eq 'John Doe'"
 ```
+
+### CLI
+
+``` Bash
+# Sign in
+az login
+
+# Create user
+az ad user create --display-name "John Doe" --user-principal-name "john@contoso.com"
+
+# Create group
+az ad group create --display-name "IT Team" --mail-nickname "ITTeam"
+
+# List users
+az ad user list --query "[].{Name:displayName,UPN:userPrincipalName}"
+```
