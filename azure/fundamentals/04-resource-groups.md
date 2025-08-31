@@ -29,6 +29,20 @@
   - However there are a few that cannot be moved
 - Moving resources will not change the configuration of the resources, but it may cause a brief amount of downtime during the move
 
+## Naming Conventions
+
+- Use descriptive and consistent names
+- If they do exist follow existing company standards
+- if making from scratch include:
+    - Environment: `rg-webapp-prod` or `rg-webapp-dev` to show whether it is development or production environment
+    - Purpose: `rg-networking-hub` or `rg-storage-backup` to easily identify what it is used for
+
+## Permissions and RBAC
+
+> [!IMPORTANT]
+> **Permissions assigned to a resource group will apply to all resources inside of the resource group**
+
+
 ## Important Commands
 
 ### PowerShell
@@ -68,3 +82,5 @@ az group delete --name rg-webapp-prod --yes --no-wait
 # Move resource
 az resource move --destination-group target-rg --ids /subscriptions/.../resourceGroups/source-rg/providers/Microsoft.Compute/virtualMachines/vm1
 ```
+
+
