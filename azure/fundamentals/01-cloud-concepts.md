@@ -1,6 +1,6 @@
 # Azure Cloud Concepts
 
-## Benefits of Cloud COmputing
+## Benefits of Cloud Computing
 
 - **Cost** – eliminates capital expense.
 - **Global scale** – ability to scale elastically.
