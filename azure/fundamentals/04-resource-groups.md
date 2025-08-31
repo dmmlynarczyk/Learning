@@ -21,7 +21,7 @@
 - Resources can be in different regions than their resource group
 - Resource in the same resource group can be in different regions
 - Resource group location only affects where metadata is stored
-- *Resource groups cannot be nested inside of other resource groups*
+- **Resource groups cannot be nested inside of other resource groups**
 
 ### Resource Movement
 
