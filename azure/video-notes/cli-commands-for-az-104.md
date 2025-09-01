@@ -32,3 +32,21 @@ New-AzVM
 Remove-AzVM
 ```
 Verb is the first part of the word but the last bit is the consistent service name, *but with no spaces like in Bash.*  
+
+## Important PowerShell Commands
+
+- **To install a new AZ module in PowerShell** run the following command as an administrator:  
+  ``` powershell
+  Install-Module -Name AZ -AllowClobber -Repository PSGallery -Force
+  ```
+- **To update a new AZ Module** run the following command as an administrator:
+  ``` powershell
+  Update-Module -Name AZ -AllowClobber -Repository PSGallery
+  ```
+- **To connect to an Azure account**:
+  ``` powershell
+  Connect-AzAccount
+  ```
+  - *This will bring up a sign-in screen for you to authenticate from.*
+- **To download the latest version of PowerShell**:
+  - Download for your operating system from [Github](https://github.com/PowerShell/PowerShell/releases)
