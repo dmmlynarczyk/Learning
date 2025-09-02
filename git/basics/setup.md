@@ -4,13 +4,18 @@
 
 ### Void Linux
 
-1. To download via CLI on Void Linux run:
+1. To download via CLI on Void Linux, run:
     - ```
        sudo xbps-install -S
        sudo xbps-install git
       ```
 2. To verify installation run `git --version`
 
+### Debian
+
+1. To download via CLI on Debian 13, run:
+    - `sudo apt install git`
+2. To verify installation run `git --version`
 
 ### Windows
 
