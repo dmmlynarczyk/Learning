@@ -2,7 +2,7 @@
 
 ## Installation
 
-### Void Linux
+### Void
 
 1. To download via CLI on Void Linux, run:
     - ```
@@ -39,7 +39,7 @@ Configuring user information used across all local repositories.
 
 ## SSH
 
-### Void Linux
+### Linux
 
 1. **Generate a new SSH key** — `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`  
 2. **Start the ssh-agent** — `eval "$(ssh-agent -s)"`  
