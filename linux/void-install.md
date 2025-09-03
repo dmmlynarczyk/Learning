@@ -16,7 +16,7 @@ With these hardware specs in mind my partitioning looks like this:
 - Select `cfdisk` option
     - First partition 1G - Type `EFI System`
     - Second partition 16G - Type `Linux Swap`
-    - Third partition Remainder - Type 'Linux Filesystem`
+    - Third partition Remainder - Type `Linux Filesystem`
 - Write changes to disk
 - In Filesystems:
     - Choose EFI partition and choose vfat as the filesystem type
