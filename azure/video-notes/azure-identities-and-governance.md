@@ -46,4 +46,13 @@ When creating groups you have the option to *allow Azure AD roles to be assigned
 
 **Assigned Groups:** are groups that have members set by the administrator manually.
 
+## Licenses
+
+> [!NOTE]
+> Adding, removing, and reprocessing licensing assignments is only available within the M365 Admin Center.  
+
+Certain good features are locked behind a license such as "Self-Service Password Change for cloud users."  Instead of users being able to change their passwords on their own, liek the license would allow, users would have to call in to the help desk instead.  
+Items such as "Multifactor authentication for administrator roles" is part of the free tier, so it allows your admin accounts to at least be secure.  This is only for the authenticator app though, things like SMS and Phone MFA are through a license.  
+Licenses may not be able to be assigned without a 'Usage Location' listed in the user's information.  
+
 
