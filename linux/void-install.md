@@ -27,16 +27,21 @@ With these hardware specs in mind my partitioning looks like this:
 
 ## Post Install
 
-### Update Void Linux
+### Updates
 
-```
-sudo xbps-install -Su
-```
+- Update the xbps package:
+    ```
+    sudo xbps-install -u xbps
+    ```
+- Sync and update packages:
+    ```
+    sudo xbps-install -Su
+    ```
 
 ### Install Important Tools
 
 ```
-sudo xbps-install -S neovim git vscode curl
+sudo xbps-install -S neovim git vscode curl xfce-whiskermenu-plugin -
 ```
 ### Install Powershell
 
