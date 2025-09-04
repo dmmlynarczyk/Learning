@@ -8,7 +8,7 @@
 > Azure AD is now called Entra ID.  
 > Any time you see Azure AD in studying, it should be Entra ID
 
-**Microsoft Entra ID**: is Microsoft's cloud-based identity and access management service that handles user authentication and authorization for Azure resources.  
+**Microsoft Entra ID:** is Microsoft's cloud-based identity and access management service that handles user authentication and authorization for Azure resources.  
 It is derivative of **Microsoft Active Directory**, which is their on-premises service for managing users, computers, and resources.
 
 ## License Tiers
