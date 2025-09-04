@@ -75,5 +75,6 @@ By default self service password reset is set to 'None', but there are three opt
 - **Selected:** limited to a specifc group of users.  
 - **All:** all users are able to reset their passwords themselves.  
 This essentially just allows the user to hit the "Forgot Password" option on the Azure login screens.  
+
 **Password Pushback:** should be enabled for a company that is AD Sync'd.  This allows a user to change their password for Azure/M365 and it will push into the on-prem Active Directory.  
 
