@@ -13,13 +13,13 @@ It is derivative of **Microsoft Active Directory**, which is their on-premises s
 
 ## License Tiers
 
-- **Microsoft Entra ID Free** — No SLA, AI, and other advanced features, but great for most basic users just starting out
+- **Microsoft Entra ID Free:** No SLA, AI, and other advanced features, but great for most basic users just starting out
   - Basic user/group management, SSO to popular apps
-- **Microsoft Entra ID P1** — Includes some advanced features
+- **Microsoft Entra ID P1:** Includes some advanced features
   - Conditional access, dynamic groups, self-service password reset
-- **Microsoft Entra ID P2** — Includes everything in P1 and more advanced features
+- **Microsoft Entra ID P2:** Includes everything in P1 and more advanced features
   - Identity protection, privileged identity management, and *Microsoft Entra ID Protection*
-- **Microsoft Entra ID Governance** — Add-on license, you must have a P1 or P2 already
+- **Microsoft Entra ID Governance:** Add-on license, you must have a P1 or P2 already
 
 ## Basic Concepts of Account, Tenant, Subscription, and Resource Group
 

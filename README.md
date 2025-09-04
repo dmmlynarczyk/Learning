@@ -4,10 +4,10 @@ This repository contains my personal notes and learning materials on various top
 
 ## What's Inside
 
-**Git** - Version control basics and workflows  
-**Azure** - Cloud services and deployment notes  
-**Networking** - Protocols, configurations, and troubleshooting  
-**Additional Topics** - New subjects as I learn them  
+**Git:** Version control basics and workflows  
+**Azure:** Cloud services and deployment notes  
+**Networking:** Protocols, configurations, and troubleshooting  
+**Additional Topics:** New subjects as I learn them  
 
 ## How I Use This Repo
 
@@ -30,4 +30,4 @@ Learning happens best when I write things down and can reference them later. Thi
 
 Browse the folders to see what topics I'm currently studying. Feel free to explore and use any notes that help you learn too.
 
-Last updated: 2025/08/24
+Last updated: 2025/09/04

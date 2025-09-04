@@ -11,10 +11,10 @@
 
 ### Resource Group Properties
 
-- **Location** — Metadata storage location (not where resources live)
-- **Lifecycle** — Deleting a resource group will delete all of the resources inside of it
-- **Permissions** — RBAC applied to a resource group will apply to all resources in that resource group
-- **Tags** — Can be applied to resource groups and be inherited down to resources
+- **Location:** Metadata storage location (not where resources live)
+- **Lifecycle:** Deleting a resource group will delete all of the resources inside of it
+- **Permissions:** RBAC applied to a resource group will apply to all resources in that resource group
+- **Tags:** Can be applied to resource groups and be inherited down to resources
 
 ### Resource Group Scope
 

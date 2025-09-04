@@ -13,29 +13,29 @@
 
 ## User Types
 
-- **Member users** — Users created directly in your Entra ID
-- **Guest users** — External users invited to your tenant (B2B)
-- **External identities** — Users from other organizations or social accounts
+- **Member users:** Users created directly in your Entra ID
+- **Guest users:** External users invited to your tenant (B2B)
+- **External identities:** Users from other organizations or social accounts
 
 ## Group Types
 
-- **Security groups** — Control access to resources (this is the most common type)  
-- **Microsoft 365 groups** — Collaboration (email, SharePoint, Teams)
-- **Dynamic groups** — Membership based on user attributes (Premium P1 required)
+- **Security groups:** Control access to resources (this is the most common type)  
+- **Microsoft 365 groups:** Collaboration (email, SharePoint, Teams)
+- **Dynamic groups:** Membership based on user attributes (Premium P1 required)
 
 ## Devices
 
-- **Register** — Becomes known entity and we can manage it.
+- **Register:** Becomes known entity and we can manage it.
   - Use this on a personal device, to make sure it is healthy, not jailbroken, etc.
-- **Join** — All of Register, but also allows you to authenticate with Entra users, and lock down the device more.
+- **Join:** All of Register, but also allows you to authenticate with Entra users, and lock down the device more.
 
 ## Licenses
 
-- **Free** — Basic user/group management, SSO to popular apps
-- **Premium P1** — Conditional access, dynamic groups, self-service password reset
-- **Premium P2** — Identity protection, privileged identity management, and *Microsoft Entra ID Protection*
-- **Pay as you go** — offers a feature called Microsoft Entra B2C
-  - **B2C** — is a business-to-consumer identity as a service that allows you to control how users sign up, sign in, and manage their profiles when using your applications.
+- **Free:** Basic user/group management, SSO to popular apps
+- **Premium P1:** Conditional access, dynamic groups, self-service password reset
+- **Premium P2:** Identity protection, privileged identity management, and *Microsoft Entra ID Protection*
+- **Pay as you go:** offers a feature called Microsoft Entra B2C
+  - **B2C:** is a business-to-consumer identity as a service that allows you to control how users sign up, sign in, and manage their profiles when using your applications.
 
 ## Important Commands
 
