@@ -36,3 +36,14 @@ It is derivative of **Microsoft Active Directory**, which is their on-premises s
 ## Domains
 
 If you choose not to add a custom domain you will be stuck with a <domain>.onmicrosoft.com style domain, which is the generic Microsoft domain space.  If you do want to add a custom domain, you will need to add either a **TXT** or **MX** record to your domain registrar records page to show you have ownership of that domain.   
+
+## Groups
+
+Groups are simply a way to organize based on a fixed assignment or on a dynamic property.  
+When creating groups you have the option to *allow Azure AD roles to be assigned to the group.*  This allows you to use the group as a way to assign permissions.  The group is just an organizational structure.  
+
+**Dynamic Groups:** are groups that are assigned members automatically based on certain criteria being met. *(If user position is X, location is Y, department is Z, etc.)*
+
+**Assigned Groups:** are groups that have members set by the administrator manually.
+
+
