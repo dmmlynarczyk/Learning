@@ -62,3 +62,7 @@ It is a way of segregating permissions into a logical seperation.  So certain us
 
 In my lab example, Teacher1 is a *Password Administrator* for Classroom1.  He can reset passwords for any person in Classroom1, but not in any othere classroom.  Student1 is a user inside of Classroom1, so he is the only person that can have their password reset by Teacher1.  An interesting thing is that we can also add groups to the assignment, so if we added a *Student Group* to Classroom1, then teacher1 could reset passwords for anyone inside of that group.  A container inside a container.  
 
+## Devices
+
+**Devices:** represent the physical devices that users use to access organizational tools, information, and resources.  My cellphone and home computer are devices that access my company's resources.  
+In devices section you can set things like, don't allow rooted/jailbroken devices or insecure devices to access resources.  
