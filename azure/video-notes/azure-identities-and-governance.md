@@ -55,4 +55,10 @@ Certain good features are locked behind a license such as "Self-Service Password
 Items such as "Multifactor authentication for administrator roles" is part of the free tier, so it allows your admin accounts to at least be secure.  This is only for the authenticator app though, things like SMS and Phone MFA are through a license.  
 Licenses may not be able to be assigned without a 'Usage Location' listed in the user's information.  
 
+## Administrative Units
+
+**Administatvie Unit:** is a resource inside of Entra that can act as a container for other resources.  It can contain only users, groups, or devices.  
+It is a way of segregating permissions into a logical seperation.  So certain users can only affect certain parts of the organization instead of the entire organization.  
+
+In my lab example, Teacher1 is a *Password Administrator* for Classroom1.  He can reset passwords for any person in Classroom1, but not in any othere classroom.  Student1 is a user inside of Classroom1, so he is the only person that can have their password reset by Teacher1.  An interesting thing is that we can also add groups to the assignment, so if we added a *Student Group* to Classroom1, then teacher1 could reset passwords for anyone inside of that group.  A container inside a container.  
 
