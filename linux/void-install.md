@@ -71,7 +71,7 @@ sudo xbps-install -S neovim git vscode curl xfce4-whiskermenu-plugin -y
 
 1. Install Flatpak
     ```
-    sudo xbps-install -S flatpak
+    sudo xbps-install -S flatpak -y
     ```
 
 2. Add the Flathub repository
