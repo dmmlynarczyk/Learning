@@ -78,3 +78,17 @@ This essentially just allows the user to hit the "Forgot Password" option on the
 
 **Password Pushback:** should be enabled for a company that is AD Sync'd.  This allows a user to change their password for Azure/M365 and it will push into the on-prem Active Directory.  
 
+## RBAC
+
+**Role Based Access Control (RBAC):** is a security feature in Azure that allows you to grant specific permissions to different Azure entities based on their ROLES in your organization.  
+At a basic level, "in order for a user to interact with a resource in Azure, you need permissions."  With 10,000s of users, and 1,000s of resources, it quickly becomes impossible to manage properly.  There could be literally millions of permissions that need to be worked on when all is said and done.  
+
+RBAC allows you to define a number of "roles" across the organization that you can then assign those roles to individuals.  Those roles have a static number of permissions, meaning you do not have to worry about giving access to too much.  As long as the role is setup properly, the user will be given least access permissions.  
+Users *CAN* be assigned to multiple roles.  
+
+*** Benefits of RBAC
+
+- A level of abstraction the helps to simplify management
+- This means fewer errors, and nobody has extra permissions that may be overlooked.
+- Easier for new users to be added to the system and assigned the correct permissions.
+
