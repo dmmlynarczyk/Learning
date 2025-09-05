@@ -86,7 +86,7 @@ At a basic level, "in order for a user to interact with a resource in Azure, you
 RBAC allows you to define a number of "roles" across the organization that you can then assign those roles to individuals.  Those roles have a static number of permissions, meaning you do not have to worry about giving access to too much.  As long as the role is setup properly, the user will be given least access permissions.  
 Users *CAN* be assigned to multiple roles.  
 
-*** Benefits of RBAC
+### Benefits of RBAC
 
 - A level of abstraction the helps to simplify management
 - This means fewer errors, and nobody has extra permissions that may be overlooked.
