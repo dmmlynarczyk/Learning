@@ -42,7 +42,7 @@ With these hardware specs in mind my partitioning looks like this:
 ### Install Important Tools
 
 ```
-sudo xbps-install -S neovim git vscode curl xfce4-whiskermenu-plugin -y
+sudo xbps-install -S neovim git vscode curl xfce4-whiskermenu-plugin xfce4-screenshooter -y
 ```
 ### Install Powershell
 
