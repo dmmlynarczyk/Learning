@@ -84,7 +84,7 @@ sudo xbps-install -S neovim git vscode curl xfce4-whiskermenu-plugin -y
 ### Install Bitwarden
 
 ```
-flatpak install flathub com.bitwarden.desktop
+flatpak install flathub com.bitwarden.desktop -y
 ```
 
 
