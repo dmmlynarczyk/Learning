@@ -87,6 +87,12 @@ sudo xbps-install -S neovim git vscode curl xfce4-whiskermenu-plugin xfce4-scree
 flatpak install flathub com.bitwarden.desktop -y
 ```
 
+## Quality of Life Changes
+
+- Under **keyboard settings** > **Application Shortcuts** add:
+    - `xfce4-popup-whiskermenu` and assign the L Super button to it.
+        - This allows you to use the Super button to launce the Whisker menu and quickly type for program names.
+
 
 
 
