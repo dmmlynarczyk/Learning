@@ -16,7 +16,7 @@ With these hardware specs in mind my partitioning looks like this:
 - Select `cfdisk` option
 
     | Partition Number | Size | Type             | Purpose        |
-    |------------------+------+------------------+----------------|
+    |------------------|------|------------------|----------------|
     |         1        |  1G  | EFI System       | EFI Partition  |
     |         2        | 983G | Linux Filesystem | Root Partition |
     |         3        |  16G | Linux Swap       | Swap Partition |
