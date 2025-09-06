@@ -51,16 +51,16 @@ When creating groups you have the option to *allow Azure AD roles to be assigned
 > [!NOTE]
 > Adding, removing, and reprocessing licensing assignments is only available within the M365 Admin Center.  
 
-Certain good features are locked behind a license such as "Self-Service Password Change for cloud users."  Instead of users being able to change their passwords on their own, liek the license would allow, users would have to call in to the help desk instead.  
+Certain good features are locked behind a license such as "Self-Service Password Change for cloud users."  Instead of users being able to change their passwords on their own, like the license would allow, users would have to call in to the help desk instead.  
 Items such as "Multifactor authentication for administrator roles" is part of the free tier, so it allows your admin accounts to at least be secure.  This is only for the authenticator app though, things like SMS and Phone MFA are through a license.  
 Licenses may not be able to be assigned without a 'Usage Location' listed in the user's information.  
 
 ## Administrative Units
 
-**Administatvie Unit:** is a resource inside of Entra that can act as a container for other resources.  It can contain only users, groups, or devices.  
-It is a way of segregating permissions into a logical seperation.  So certain users can only affect certain parts of the organization instead of the entire organization.  
+**Administrative Unit:** is a resource inside of Entra that can act as a container for other resources.  It can contain only users, groups, or devices.  
+It is a way of segregating permissions into a logical separation.  So certain users can only affect certain parts of the organization instead of the entire organization.  
 
-In my lab example, Teacher1 is a *Password Administrator* for Classroom1.  He can reset passwords for any person in Classroom1, but not in any othere classroom.  Student1 is a user inside of Classroom1, so he is the only person that can have their password reset by Teacher1.  An interesting thing is that we can also add groups to the assignment, so if we added a *Student Group* to Classroom1, then teacher1 could reset passwords for anyone inside of that group.  A container inside a container.  
+In my lab example, Teacher1 is a *Password Administrator* for Classroom1.  He can reset passwords for any person in Classroom1, but not in any other classroom.  Student1 is a user inside of Classroom1, so he is the only person that can have their password reset by Teacher1.  An interesting thing is that we can also add groups to the assignment, so if we added a *Student Group* to Classroom1, then teacher1 could reset passwords for anyone inside of that group.  A container inside a container.  
 
 ## Devices
 
@@ -71,8 +71,8 @@ In devices section you can set things like, don't allow rooted/jailbroken device
 
 Password reset is available to administrative users already, but not for other users without special licensing.  
 By default self service password reset is set to 'None', but there are three options to choose from:
-- **None:** no one can reset their password by themselves, and users must call in to helpd desk.  
-- **Selected:** limited to a specifc group of users.  
+- **None:** no one can reset their password by themselves, and users must call in to help desk.  
+- **Selected:** limited to a specific group of users.  
 - **All:** all users are able to reset their passwords themselves.  
 This essentially just allows the user to hit the "Forgot Password" option on the Azure login screens.  
 
@@ -101,9 +101,9 @@ Users *CAN* be assigned to multiple roles.
 
 You can also make custom roles!  
 To do this you need to have an Azure Premium P1/P2 to gain access to custom roles.  But it will allow you to get super-granular into permissions to pick and choose specifics.  
-This is done at the Subscription level under IAM > "+ Custome Role"  
+This is done at the Subscription level under IAM > "+ Custom Role"  
 
 ### Interpret Access Assignments
 
-You can view who has access to different resources, by goining into that resource group, clicking "Access Control (IAM), clicking "role assignments", and you will be presented with a list of users with different roles.  
+You can view who has access to different resources, by going into that resource group, clicking "Access Control (IAM), clicking "role assignments", and you will be presented with a list of users with different roles.  
 The other way is be selecting the user in Entra ID and selecting either "Azure role assignments" or "Assigned roles"  
