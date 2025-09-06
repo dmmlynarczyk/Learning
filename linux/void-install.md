@@ -14,9 +14,12 @@
 When setting up my partitions I typically have the same hardware configuration of 1TB SSD and 16GB RAM.  
 With these hardware specs in mind my partitioning looks like this:  
 - Select `cfdisk` option
-    - First partition 1G - Type `EFI System` *This is the EFI partition*
-    - Second partition 983G - Type `Linux Filesystem` *This is the root partition*
-    - Third partition 16G - Type `Linux Swap` *This is the swap partition*
+
+    | Partition Number | Size | Type             | Purpose        |
+    |------------------+------+------------------+----------------|
+    |         1        |  1G  | EFI System       | EFI Partition  |
+    |         2        | 983G | Linux Filesystem | Root Partition |
+    |         3        |  16G | Linux Swap       | Swap Partition |
     
 - Write changes to disk
 - In Filesystems:
