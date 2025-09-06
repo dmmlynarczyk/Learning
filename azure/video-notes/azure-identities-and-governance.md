@@ -99,7 +99,7 @@ Users *CAN* be assigned to multiple roles.
 - **Reader:** View all resources, but does not allow you to make any changes.  
 
 
-You can alos make custom roles!  
+You can also make custom roles!  
 To do this you need to have an Azure Premium P1/P2 to gain access to custom roles.  But it will allow you to get super-granular into permissions to pick and choose specifics.  
 This is done at the Subscription level under IAM > "+ Custome Role"  
 
