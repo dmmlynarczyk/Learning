@@ -21,18 +21,6 @@ It is derivative of **Microsoft Active Directory**, which is their on-premises s
   - Identity protection, privileged identity management, and *Microsoft Entra ID Protection*
 - **Microsoft Entra ID Governance:** Add-on license, you must have a P1 or P2 already
 
-## Basic Concepts of Account, Tenant, Subscription, and Resource Group
-
-- **Account** is a person or a program
-  - If an app, it is called a **Managed Identity**
-- **Tenant** is a representation of an organization
-  - Typically represented bya  public domain, but will be assigned a .onmicrosoft.com domain if not specified
-  - A dedicated instance of **Entra ID**
-  - **Every Azure Account is part of at least one tenant**  
-- **Subscription** is an agreement with Microsoft to use Azure services, and how you will pay for that usage.
-  - All Azure resource usage will be billed to the payment method of the subscription
-- **Resource Group** is a container that holds related resources.
-
 ## Domains
 
 If you choose not to add a custom domain you will be stuck with a <domain>.onmicrosoft.com style domain, which is the generic Microsoft domain space.  If you do want to add a custom domain, you will need to add either a **TXT** or **MX** record to your domain registrar records page to show you have ownership of that domain.   
@@ -99,7 +87,7 @@ Users *CAN* be assigned to multiple roles.
 - **Reader:** View all resources, but does not allow you to make any changes.  
 
 
-You can also make custom roles!  
+**You can also make custom roles!**  
 To do this you need to have an Azure Premium P1/P2 to gain access to custom roles.  But it will allow you to get super-granular into permissions to pick and choose specifics.  
 This is done at the Subscription level under IAM > "+ Custom Role"  
 
@@ -107,3 +95,24 @@ This is done at the Subscription level under IAM > "+ Custom Role"
 
 You can view who has access to different resources, by going into that resource group, clicking "Access Control (IAM), clicking "role assignments", and you will be presented with a list of users with different roles.  
 The other way is be selecting the user in Entra ID and selecting either "Azure role assignments" or "Assigned roles"  
+
+## Accounts, Subscriptions, and Governance
+
+- **Account:** a user ID, so it is a person or an app (managed identity).
+  - It is considered a bad practice to take a peron's real credentials and program them into an application.
+- **Tenant** is a representation of an organization
+  - Typically represented bya  public domain, but will be assigned a .onmicrosoft.com domain if not specified
+  - A dedicated instance of **Entra ID**
+  - **Every Azure Account is part of at least one tenant**  
+- **Subscription** is an agreement with Microsoft to use Azure services, and how you will pay for that usage
+  - All Azure resource usage will be billed to the payment method of the subscription
+  - Not every tenant has a subscription, but a tenant without one, will not be able to create Azure resources
+  - Tenants can have more than one subscription
+  - More than one account can be the owner in a tenant
+- **Resource** is any entity managed by Azure
+  - Accounts can be given read, update, owner rights to resources
+- **Resource Group** is a container that holds related resources and allows for keeping unrelated resources separate
+  - It is a way of organizing resources in a subscription
+  - Think of it like a folder structure
+  - **All resources must belong to only one resource group
+  - When you delete a resource group, it will also delete all resources inside
