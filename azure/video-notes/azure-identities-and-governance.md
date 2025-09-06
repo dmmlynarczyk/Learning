@@ -78,7 +78,7 @@ This essentially just allows the user to hit the "Forgot Password" option on the
 
 **Password Pushback:** should be enabled for a company that is AD Sync'd.  This allows a user to change their password for Azure/M365 and it will push into the on-prem Active Directory.  
 
-## RBAC
+## Role Based Access Control (RBAC) 
 
 **Role Based Access Control (RBAC):** is a security feature in Azure that allows you to grant specific permissions to different Azure entities based on their ROLES in your organization.  
 At a basic level, "in order for a user to interact with a resource in Azure, you need permissions."  With 10,000s of users, and 1,000s of resources, it quickly becomes impossible to manage properly.  There could be literally millions of permissions that need to be worked on when all is said and done.  
@@ -92,3 +92,18 @@ Users *CAN* be assigned to multiple roles.
 - This means fewer errors, and nobody has extra permissions that may be overlooked.
 - Easier for new users to be added to the system and assigned the correct permissions.
 
+### Role Types
+
+- **Owner:** Grants full access to manage all resources, including the ability to assign roles in Azure RBAC.  
+- **Contributor:** Grants full access to manage all resources, *but does not allow you to assign roles in Azure RBAC*, manage assignments in Azure Blueprints, or *share image galleries.*  
+- **Reader:** View all resources, but does not allow you to make any changes.  
+
+
+You can alos make custom roles!  
+To do this you need to have an Azure Premium P1/P2 to gain access to custom roles.  But it will allow you to get super-granular into permissions to pick and choose specifics.  
+This is done at the Subscription level under IAM > "+ Custome Role"  
+
+### Interpret Access Assignments
+
+You can view who has access to different resources, by goining into that resource group, clicking "Access Control (IAM), clicking "role assignments", and you will be presented with a list of users with different roles.  
+The other way is be selecting the user in Entra ID and selecting either "Azure role assignments" or "Assigned roles"  
