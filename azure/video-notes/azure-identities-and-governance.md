@@ -116,3 +116,32 @@ The other way is be selecting the user in Entra ID and selecting either "Azure r
   - Think of it like a folder structure
   - **All resources must belong to only one resource group
   - When you delete a resource group, it will also delete all resources inside
+
+### Cost Management - Analysis, Alerts, Budget, and Advisor
+
+If you ever want to see how your account is being billed it is easiest to go under "Subscription" to **"Cost Management"** where you can view your "cost analysis", "Cost alerts", "Budgets", and "Advisor recommendations."  
+- **Cost Analysis:** this is going to tell you in detail how we are accumilating costs, which resources are using them, what the cost forecast for the end of the billing period is, etc.
+- **Cost Alerts:** allows you to set up alerts based on certain thresholds based on what you are expected to spend.
+  - Also allows you to set up cost anomaly alerts.
+- **Budgets:** allows you to set an alert (SMS, email) when your monthly expenditure has hit certain thresholds.  Such as percentage of a budget being reached.
+- **Advisor Recommendations:** runs across your account and makes recommendations across categories, including costs!
+
+### Resource Locks
+
+**ReadOnly:** prevents a resource from being modified AND deleted.  You cannot make ANY changes to ANY resource the lock is applied to.
+**Delete:** prevents a resource from being deleted, but can still be modified.
+
+The lock will need to be removed before you can modify/delete your resource that the lock is applied to.  Can be applied to subscription, resource group, and individual resources!
+
+### Azure Policies
+
+**Policy Definition:** is a blueprint or template that describes what should be evaluated and what action to take.  It definies the rules and logic (like "only logins from location XYZ are allowed or what version of SQL server you are allowed to deploy)
+**Policy:** is an instance of a policy definition that has been assigned to a specific scope.  This is the policy definition put into action with specific parameters and enforcement settings.
+**Initiative:** is a collection of policies, so you can batch assign a group of related policies if you need.  
+
+### Tags
+
+Tags allow you to define a name/value pair that can be attached to resources.  
+Important to keep it consistent in your organization to ensure things are easy to find/determine. 
+You could set policies to require tags for all different types of things in Azure.  Subscriptions, resource groups, resources, etc.  
+
