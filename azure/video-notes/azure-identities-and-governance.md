@@ -114,7 +114,7 @@ The other way is be selecting the user in Entra ID and selecting either "Azure r
 - **Resource Group** is a container that holds related resources and allows for keeping unrelated resources separate
   - It is a way of organizing resources in a subscription
   - Think of it like a folder structure
-  - **All resources must belong to only one resource group
+  - **All resources must belong to only one resource group**
   - When you delete a resource group, it will also delete all resources inside
 
 ### Cost Management - Analysis, Alerts, Budget, and Advisor
