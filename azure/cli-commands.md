@@ -58,14 +58,24 @@ Verb is the first part of the word but the last bit is the consistent service na
 The following two lines will take a password, that you make that is complex enough to meet your organizations complexity requirements and assign it to a variable `$passwordProfile`.  
 Next it will create a new user with specific flags such as UserPrincipalName, DisplayName, Password, AccountEnabled, JobTitle, Department, and UsageLocation.  
 
-1. Create a complex password:
+1. Assign your variables:
   ``` powershell
-  $password = "xxxxxxxxxx"
-  $passwordProfile = New-Object -TypeName "Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphPasswordProfile" -Property @{Password=$password}
+  $password = <string>
+  $uname = <string>
+  $nickname = <string>
+  $upn = <string> # this is the email address
+  $jobTitle = <string>
+  $dept = <string>
+  $location = <string>
   ```
-2. Create a new user for your domain:
+
+2. Store your complex password:
   ``` powershell
-  New-AzADUser -UserPrincipalName <string> -DisplayName <string> -PasswordProfile $passwordProfile -AccountEnabled $true -JobTitle <string> -Department <string> -UsageLocation <String>
+  $passwordProfile = New-Object -TypeName "Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.MicrosoftGraphPasswordProfile" -Property @{Password=$password}
+  ```
+3. Create a new user for your domain:
+  ``` powershell
+  New-AzADUser -UserPrincipalName $upn -DisplayName $uname -MailNickname $nickname -PasswordProfile $passwordProfile -AccountEnabled $true -JobTitle $jobTitle -Department $dept -UsageLocation $location
   ```
 
 The flags used for creating the user come from [learn.microsoft.com](https://learn.microsoft.com/en-us/powershell/module/az.resources/new-azaduser?view=azps-14.3.0)
