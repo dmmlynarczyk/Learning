@@ -15,18 +15,20 @@ Build automated identity management workflows using Microsoft Graph PowerShell S
 
 **Technical Implementation Highlights**:
 
-For the new user creation:
-``` powershell
-$password = "xxxxxxxxxxx"
-$nickname = "ps001"
-$uname = "az104-user1"
-$upn = "az104-user1@domain.com"
-$jobTitle = "IT Lab Administrator"
-$dept = "IT"
-$location = "US"
-$passwordProfile = New-Object -TypeName "Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.MicrosoftGraphPasswordProfile" -Property @{Password=$password}
-New-AzADUser -UserPrincipalName $upn -DisplayName $uname -MailNickname $nickname -PasswordProfile $passwordProfile -AccountEnabled $true -JobTitle $jobTitle -Department $dept -UsageLocation $location
-```
+- For the new user creation:
+   ``` powershell
+   $password = "xxxxxxxxxxx"
+   $nickname = "ps001"
+   $uname = "az104-user1"
+   $upn = "az104-user1@domain.com"
+   $jobTitle = "IT Lab Administrator"
+   $dept = "IT"
+   $location = "US"
+   
+   $passwordProfile = New-Object -TypeName "Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.MicrosoftGraphPasswordProfile" -Property @{Password=$password}
+   
+   New-AzADUser -UserPrincipalName $upn -DisplayName $uname -MailNickname $nickname -PasswordProfile $passwordProfile -AccountEnabled $true -JobTitle $jobTitle -Department $dept -UsageLocation $location
+   ```
 
 **Enterprise Automation Skills Demonstrated**:
 - **Script Development**: Built reusable PowerShell functions for bulk user creation
