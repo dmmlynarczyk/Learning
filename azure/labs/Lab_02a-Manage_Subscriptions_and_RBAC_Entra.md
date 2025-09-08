@@ -1,4 +1,4 @@
-# Lab 02a - Manage Subscriptions and RBAC
+# Lab 02a - Manage Subscriptions and RBAC Entra
 
 **Real-World Context**: *Utilizing RBAC to control what action identities can perform and ease the burden of subscription management.*
 
