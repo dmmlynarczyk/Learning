@@ -138,3 +138,11 @@ The following will grab the group you specify and add multiple users to it:
    }
    ```
 The flags used for creating the user come from [learn.microsoft.com](https://learn.microsoft.com/en-us/powershell/module/az.resources/add-azadgroupmember?view=azps-14.4.0)
+
+## Resource Group Management
+
+### Delete A Resource Group
+
+``` powershell
+Remove-AzResourceGroup -Name resourceGroupName
+```
