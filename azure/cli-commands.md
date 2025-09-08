@@ -59,23 +59,82 @@ The following two lines will take a password, that you make that is complex enou
 Next it will create a new user with specific flags such as UserPrincipalName, DisplayName, Password, AccountEnabled, JobTitle, Department, and UsageLocation.  
 
 1. Assign your variables:
-  ``` powershell
-  $password = <string>
-  $uname = <string>
-  $nickname = <string>
-  $upn = <string> # this is the email address
-  $jobTitle = <string>
-  $dept = <string>
-  $location = <string>
-  ```
+   ``` powershell
+   $password = <string>
+   $uname = <string>
+   $nickname = <string>
+   $upn = <string> # this is the email address
+   $jobTitle = <string>
+   $dept = <string>
+   $location = <string>
+   ```
 
 2. Store your complex password:
-  ``` powershell
-  $passwordProfile = New-Object -TypeName "Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.MicrosoftGraphPasswordProfile" -Property @{Password=$password}
-  ```
+   ``` powershell
+   $passwordProfile = New-Object -TypeName "Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.MicrosoftGraphPasswordProfile" -Property @{Password=$password}
+   ```
 3. Create a new user for your domain:
-  ``` powershell
-  New-AzADUser -UserPrincipalName $upn -DisplayName $uname -MailNickname $nickname -PasswordProfile $passwordProfile -AccountEnabled $true -JobTitle $jobTitle -Department $dept -UsageLocation $location
-  ```
+   ``` powershell
+   New-AzADUser -UserPrincipalName $upn -DisplayName $uname -MailNickname $nickname -PasswordProfile $passwordProfile -AccountEnabled $true -JobTitle $jobTitle -Department $dept -UsageLocation $location
+   ```
 
 The flags used for creating the user come from [learn.microsoft.com](https://learn.microsoft.com/en-us/powershell/module/az.resources/new-azaduser?view=azps-14.3.0)
+
+### Creating An External User
+
+The following will create a new external user with appropriate flags filled out.
+
+1. Assign the variables:
+   ``` powershell 
+   $emailAddress = <string>
+   $displayName = <string>
+   $customizedMessageBody = <string>
+   ```
+2. Create a new external user for your domain:
+   ``` powershell  
+   $invitation = New-AzureADMSInvitation -InvitedUserDisplayName $displayName -SendInvitationMessage $True -InvitedUserEmailAddress $emailAddress -InviteRedirectUrl "https://account.activedirectory.windowsazure.com/" -InvitedUserMessageInfo @{ "MessageLanguage" = "en-US"; "CustomizedMessageBody" = $customizedMessageBody } -InvitedUserType Guest
+   ```
+The flags used for creating the user come from [learn.microsoft.com](https://learn.microsoft.com/en-us/powershell/module/azuread/new-azureadmsinvitation?view=azureadps-2.0)
+
+### Creating A Security Group
+
+The following will create a security group with mail disabled.
+
+1. Assign the variables:
+   ``` powershell
+   $description = <string>
+   $displayName = <string>
+   $mailNickname = <string>
+   ```
+2. Create the group:
+   ``` powershell
+   New-AzureADMSGroup -DisplayName $displayName -Description $description -MailEnabled $False -MailNickname $mailNickname -SecurityEnabled $True 
+   ```
+The flags used for creating the user come from [learn.microsoft.com](https://learn.microsoft.com/en-us/powershell/module/azuread/new-azureadmsgroup?view=azureadps-2.0)
+For bulk actions I found [THIS](https://www.linkedin.com/pulse/creating-groups-azure-ad-using-powershell-ewan-monro/?articleId=6506786193370423296) article on Linkedin.
+
+### Add Multiple Users To A Group
+
+The following will grab the group you specify and add multiple users to it:
+
+1. Get the group you are looking for with:
+   ``` powershell
+   Get-AzADGroup
+   ```
+2. Assign your specific group ID to a variable
+   ``` powershell
+   $group = Get-AzADGroup -DisplayName "IT Lab Administrators"
+   $groupId = $group.Id
+   ```
+3. Add your list of users to a variable:
+   ``` powershell
+   $users = @("external01_dmresume.com#EXT#@dylanmlynarczykprotonmail.onmicrosoft.com", "az104-user1@mlynarczyk.family")
+   ```
+4. Add your users to the group and confirm they were added:
+   ``` powershell
+   foreach ($user in $users) {
+    Add-AzADGroupMember -TargetGroupObjectId $groupId -MemberUserPrincipalName $user
+    Write-Host "Added $user to It Lab Administrators group"
+   }
+   ```
+The flags used for creating the user come from [learn.microsoft.com](https://learn.microsoft.com/en-us/powershell/module/az.resources/add-azadgroupmember?view=azps-14.4.0)
