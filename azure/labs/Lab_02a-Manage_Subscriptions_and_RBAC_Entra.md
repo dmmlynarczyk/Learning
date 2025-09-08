@@ -2,7 +2,7 @@
 
 **Real-World Context**: *Utilizing RBAC to control what action identities can perform and ease the burden of subscription management.*
 
-**What I Did**: 
+**What I Did**: Create management groups, assign pre-configured and custom roles to groups, and monitored activity log for specific creation activity.
 
 management group creation
 assign a role to a group
