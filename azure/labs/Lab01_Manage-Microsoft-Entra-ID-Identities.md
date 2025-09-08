@@ -61,6 +61,7 @@
 **Enterprise Automation Skills Demonstrated**:
 - **Script Development**: Built reusable PowerShell functions for bulk user creation
 - **Batch Processing**: Created CSV import functionality for mass user provisioning
+  - Learned about powershell looping `foreach` to do lab in only CLI without importing a .txt or .csv
 
 **Business Impact**:
 - *Time Savings*: 5-minute manual process becomes 30-second automated task
