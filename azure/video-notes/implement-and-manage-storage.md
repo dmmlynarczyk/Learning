@@ -43,3 +43,20 @@ The default version are set, because they are typically the best options, and sh
 - **Archived**: Can only be set at the blob level and not on the account.  VERY SLOW to get your data otherwise VERY EXPENSIVE for priority retrieval.
 
 
+### Networking
+
+There are three ways you can connect to your storage account:
+- By default storage accounts have public internet access, so anyone, anywhere in the world can access the storage account data if they have the public URL and they have the Access Key!  
+- If that gives you uneasy-ness, you can choose to only allow from selected virtual networks and IP addresses.  
+- Otherwise you can disable all public access and only allow for private access.  
+  - By choosing this option you can create a private endpoint to allow a private connection to your resource.
+
+### Data Protection
+
+**Data Protection**: Keeps your data protected from accidental or erroneous deletion or modification of files.  
+**Point-in-time restore**: allows you to restore a container to an earlier state in time.  
+**Soft Delete**: when you go to delete a file, it will mark is as 'marked for deletion' and not actually delete it.  You will then have a number of days, specified by you, to retrieve the file before it is actually deleted.  
+**Tracking**: Allows you to keep track of changes made to your blob data.  
+**File immutability**: means that you have a file that can never be deleted or edited, and you can be certain that it has not been changed.  
+
+## Encryption
