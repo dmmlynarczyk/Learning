@@ -65,3 +65,36 @@ There are two encryption types in Azure:
 - **Microsoft-managed keys**: where Microsoft takes care of everything, and everything is stored on the hard drives encrypted. (*Default*)
 - **Customer-managed keys**: you create and manage the keys and provided the keys to a key vault that you reference.
 
+## Containers
+
+- **Containers**: a place where all of your files live.  
+  - It is just like it sounds, you can put multiple file types in it, and you can also have multiple containers.  
+
+## Access Keys and Shared Access Signature(SAS)
+
+- **Access Keys**: authenticate your applications' requests to the storage account.
+  - There are two keys you can use, so while one is being used you are able to rotate the other to constantly replace them.
+  - If someone has your key, they have full access to everything on your storage account.
+- **Shared Access Signature (SAS)**: is a more secure way to grant access to your blob or container.
+  - Uses a URI that grants restricted access to an Azure Storage blob.
+  - *Use this when you want to grant access to storage account resources for a specific time range without sharing your storage account key.*
+  - The one big downside is there is no way to revoke it, the only thing you can do is regenerate the Access Key that was used in the SAS creation.
+
+## Stored Access Policies
+
+- **Stored Access Policy**: is a way to centrally manages SAS token settings.
+  - Defined at the container level.
+  - You can create only the policy (person can access from 2025/09/07 - 2025/10/07) and not actually share anything.
+  - When using a Stored Access Policy you are not able to set it in the SAS creation tool.  This is better, because you can extend/shorten the time permissions without regenerating the keys.
+  - Best for long lived policies >6 months.
+  - Also allows you to reuse policies.
+
+## Entra ID Access Control
+
+- Authentication through Azure
+- Shifts the authentication from what you have (secret key) to what you are.
+- For StorageV2 (general purpose v2) this is enabled by default.
+- Good to disable "Allow storage account key access" when using Access Control.
+- This is an role assignment in IAM
+- Not perfect because you do not have as fine grained control to revoke access as Access Keys.
+
