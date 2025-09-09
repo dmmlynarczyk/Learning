@@ -60,3 +60,8 @@ There are three ways you can connect to your storage account:
 **File immutability**: means that you have a file that can never be deleted or edited, and you can be certain that it has not been changed.  
 
 ## Encryption
+
+There are two encryption types in Azure:
+- **Microsoft-managed keys**: where Microsoft takes care of everything, and everything is stored on the hard drives encrypted. (*Default*)
+- **Customer-managed keys**: you create and manage the keys and provided the keys to a key vault that you reference.
+
