@@ -23,9 +23,23 @@ The data in your Azure storage account is always replicated (*copied three times
 - **Zone-redundant storage (ZRS)**: Intermediate option with protection against datacenter-level failures.
   - Recommended for high availability scenarios.
   - Spreads across three datacenters across one region.
-- **Geo-zone-redundant storage (GZRS): Optimal data protection solution that includes the offerings of both GRS and ZRS.
+- **Geo-zone-redundant storage (GZRS)**: Optimal data protection solution that includes the offerings of both GRS and ZRS.
   - Recommended for critical data scenarios.
   - Three copies of your files in three different datacenters in two different regions.
   - **This is the safest option if you NEED your data safe.**
 
 ### Advanced Options
+
+Just like in AWS, Azure has an option to allow/disallow anonymous access on individual storage containers.  It is best to leave it off (*Default*) as this will greatly reduce an accidental leak of anything in your storage accounts.  
+
+The default version are set, because they are typically the best options, and shouldn't be altered unless you have specific reasons for altering.  
+
+### Blob Storage Access tiers
+
+**Access Tier**: is the default tier that is inferred by any blob *without an explicitly set tier*
+- **Hot**: Optimized for frequently accessed data and everyday usage scenarios (*Default*)
+- **Cool**: Optimized for infrequently accessed data and backup scenarios
+- **Cold**: Optimized for rarely accessed data and backup scenarios
+- **Archived**: Can only be set at the blob level and not on the account.  VERY SLOW to get your data otherwise VERY EXPENSIVE for priority retrieval.
+
+
