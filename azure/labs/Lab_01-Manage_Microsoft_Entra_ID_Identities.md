@@ -6,7 +6,7 @@
 
 ## Basic Commands I Used
 
-- For the new internal user creation:
+- **For the new internal user creation**:
    ``` powershell
    $password = "xxxxxxxxxxx"
    $mailNickname = "ps001"
@@ -21,7 +21,7 @@
    New-AzADUser -UserPrincipalName $userPrincipalName -DisplayName $displayName -MailNickname $mailNickname -PasswordProfile $passwordProfile -AccountEnabled $true -JobTitle $jobTitle -Department $department -UsageLocation $usageLocation
    ```
    
-- For the new external user creation:
+- **For the new external user creation**:
   ``` powershell
   $emailAddress = "external01@domain.com"
   $displayName = "External01"
@@ -30,7 +30,7 @@
   $invitation = New-AzureADMSInvitation -InvitedUserDisplayName $displayName -SendInvitationMessage $True -InvitedUserEmailAddress $emailAddress -InviteRedirectUrl "https://account.activedirectory.windowsazure.com/" -InvitedUserMessageInfo @{ "MessageLanguage" = "en-US"; "CustomizedMessageBody" = $customizedMessageBody } -InvitedUserType Guest
   ```
 
-- For creating a new group:
+- **For creating a new group**:
   ``` powershell
   $description = "Administrators that manage the IT lab"
   $displayName = "IT Lab Administrators"
@@ -39,7 +39,7 @@
   New-AzureADMSGroup -DisplayName $displayName -Description $description -MailEnabled $False -MailNickname $mailNickname -SecurityEnabled $True 
   ```
 
-- For adding users to the previously created group:
+- **For adding users to the previously created group**:
   ``` powershell
   # Get the group first
   $group = Get-AzADGroup -DisplayName "IT Lab Administrators"

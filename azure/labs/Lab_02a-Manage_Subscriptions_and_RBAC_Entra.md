@@ -12,3 +12,13 @@ create a custom RBAC role
     Built-in roles might have too many permissions for your scenario.
 Monitor role assignments with activity log
     filter activity log for specific operations
+
+    ## Basic Commands I Used
+
+## What I Learned
+
+**Encountered Issues**: 
+**Enterprise Automation Skills Demonstrated**: 
+**Business Impact**: 
+**Key Insights**: 
+
