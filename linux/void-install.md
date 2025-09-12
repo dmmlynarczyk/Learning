@@ -93,10 +93,10 @@ flatpak install flathub com.bitwarden.desktop -y
 ## Quality of Life Changes
 
 - Under **keyboard settings** > **Application Shortcuts** add:
-    - `xfce4-popup-whiskermenu` and assign the L Super button to it.
-        - This allows you to use the Super button to launce the Whisker menu and quickly type for program names.
-
-
+    - `xfce4-popup-whiskermenu` and assign the Super button to it.
+        - This allows you to use the Super button to launch the Whisker menu and quickly type for program names.
+    - `xflock` and assign the Super+L.
+        - This allows you to use the Super+L combination to lock the screen.
 
 
 
