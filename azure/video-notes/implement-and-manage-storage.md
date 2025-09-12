@@ -98,3 +98,42 @@ There are two encryption types in Azure:
 - This is an role assignment in IAM
 - Not perfect because you do not have as fine grained control to revoke access as Access Keys.
 
+## Lifecycle Management
+
+**Lifecycle Management**: offers a rule-based policy for general purpose v2 and blob storage accounts.
+- Allows you to transition your data to different data access tiers (more expensive -> cheaper) or delete the data at the end of their lifecycle.
+- The tiers can be found in the [Blob Storage Access Tier Section](#Blob-Storage-Access-Tiers) but for summary:
+  - **Move to cool storage**: for infrequently accessed data that you want to keep on cool storage for at least 30 days.
+  - **Move to cold storage**: for rarely accessed data that you want to keep for at least 90 days.
+  - **Move to archive storage**: use if you don't need online access and want to keep the object for 180 days or longer.
+  - **Delete the blob**: deletes the object per the specified conditions.
+> [!NOTE]
+> The days are the **minimum** amount they will be in that storage tier that you will be charged for.
+
+## Object Replication
+
+**Object replication**: when enabled, blobs are copied *asynchronously* from a source storage account to a destination account.
+
+## Storage Browser
+
+Allows you perform some file operations such as copy/paste and more in the browser fro your storage account.  
+You can also generate and SAS key to access the files right from the storage browser.  
+There is also a desktop app for Windows, Mac, and Linux OSs.  
+
+## File Shares
+
+> [!IMPORTANT]
+> Storage accounts are accessed via TCP port 445, which is the same port SMB uses.
+> Many ISP's block this port by default.  So you may require a VPN in order to connect.
+
+More similar to what you would call a file server on your own network.  
+Great for a lift and shift scenario.  
+Use SMB (for windows) and NFS (for Linux) protocols.  
+Can utilize Azure Backup to protect file shares from accidental deletion or modification.
+
+**Access Tiers**:
+- **Transaction optimized**: lowest transaction cost pricing for transaction-heavy workloads.
+  - Recommended while migrating to Azure Files.
+- **Premium**: Only available for premium file storage accounts.
+- **Hot**: Balanced storage and transaction pricing for workloads that have a good measure of both.
+- **Cool**: Most cost-efficient storage pricing for storage-intensive workloads.
