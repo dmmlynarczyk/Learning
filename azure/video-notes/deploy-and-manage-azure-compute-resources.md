@@ -27,7 +27,25 @@ These are great for low-priority workloads.
 
 ### Sizes
 
-[TO ADD]
+**Instance Family**:
+- **General Purpose**: balanced VM.
+  - Balanced CPU-to-memory ratio.
+  - Ideal for testing and development, small to medium databases, and low to medium traffic web servers.
+- **Compute Optimized**: double the CPU cores.
+  - High CPU-to-memory ratio.
+  - Good for medium traffic web servers, network appliances, batch processes, and application servers.
+- **Memory Optimized**: double the memory.
+  - High memory-to-core ratio.
+  - Great for relational database servers, medium to large caches, and in-memory analytics.
+- **Storage Optimized**: double the local storage.
+  - High disk throughput and IO.
+  - Ideal for Big Data, SQL, and NoSQL databases.
+- **GPU**: access to a graphics processing unit.
+  - Specialized virtual machines targeted for heavy graphic rendering and video editing available with single or multiple GPUs.
+- **High-Performance Compute**: fastest everything.
+  - Fastest and most powerful CPU virtual machines with optional high-throughput network interfaces (RDMA).
+
+
 
 ### Hibernation
 
