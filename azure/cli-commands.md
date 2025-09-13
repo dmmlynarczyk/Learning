@@ -146,3 +146,22 @@ The flags used for creating the user come from [learn.microsoft.com](https://lea
 ``` powershell
 Remove-AzResourceGroup -Name resourceGroupName
 ```
+
+## Compute Resource Management
+
+### Create A VMSS
+
+``` bash
+az vmss scale \
+ --name azvmssdemo \
+ --resource-group <resource_group_name> \
+ --new-capacity 2
+```
+
+### Create a VM
+
+*This is the most basic way to create a VM, it will get defaults for all values.*
+
+``` powershell
+New-AzVM -Name <name> -Credential (Get-Credential)
+```

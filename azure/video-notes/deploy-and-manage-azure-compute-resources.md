@@ -109,8 +109,41 @@ From your VM page, on the blade select Size under the "Availability + scale" sec
 
 RDP should be removed as it is very insecure and not a good option long term. If you do choose to use it, it is best to change source to only specific IPs.  But a safer alternative is **Azure Bastion Service**.
 **Bastion**: is a way to connect remotely to your VM through the Azure portal. No public IPs required, and port 3389 and 22 do not need to be opened anymore.
-- There are serveral tiers in Bastion:
+- There are several tiers in Bastion:
   - Developer
   - Basic
   - Standard
   - Premium
+
+## Virtual Machine Scale Sets
+
+Instead of scaling *up* (larger CPU, more RAM, etc.) we also have the option to scale *out* (more of the same device).  And that has to deal with increasing the number of identical load balanced instances there are.  
+This helps in reducing the risk of the possibility of your application going down, now there are two, four, eight or however many instances running your application making it much more fault tolerant and highly available.  
+**Virtual Machine Scale Set (VMSS)**: is a group of identical, load balanced VMs that can automatically scale in or scale out.  Designed for stateless servers like web applications and web servers, where it does not need to remember anything about previous interactions.  
+- Auto scaling
+- Redundancy
+- Load balancing
+
+**Orchestration modes**: determines how VMs are handled by the scale set.  There are two options:  
+- **Flexible**: achieve high availability at scale with identical or multiple virtual machine types.  More complicated and can handle stateful instances.  
+- **Uniform**: optimized for large scale stateless workloads. You cannot manage any single machine as it is all the exact same.
+
+**Overprovisioning**: When turned on the scale set will spin up more VMs than you asked for, and will delete the extra VMs once the requested number of VMs are successfully provisioned.  It improves success rates and reduces deployment times. *You are not billed for the extra VMs and they do not count toward your quota limits.*
+
+**Health Monitoring**: Azure will check VMs health and see that things are responding properly.  If it detects health issues it will begin the process of provisioning new VMs and also taking off connections to the failing machine.
+
+### Virtual Machine Scaling
+
+**Manual Scaling**:
+- On the blade menu in the VMSS service page, there is "Availability + scale" > "Scaling".  
+- In here you are able to manually override the number of instance you can create up to 1000 instances.  
+- This is not the preferred method, as automatic is better management wise, *BUT* for predictable workloads, manual scaling is perfectly fine.  
+  - If you know you always need 5 instances, etc it is perfect. 
+
+*Manual scaling is an important way that you can save money if you are good about understanding and managing your needs and resources.*
+
+**Automatic Scaling**:
+- Allows you to scale on any schedule, based on any metrics or predictively.
+- **Predictive Autoscale**: uses machine learning to forecast when your machine might need more capacity.
+  - It knows that every Monday at 10AM there is a spike in traffic so it might provision a new instance at 9:45AM to be ready for that spike at 10AM and once the spike is done, it will scale back down.
+
